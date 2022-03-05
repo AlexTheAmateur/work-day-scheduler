@@ -28,64 +28,25 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
-      <!-- Modal -->
-      <div
-        class="modal fade"
-        id="task-form-modal"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="task-form-modal"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="myModalTitle">Add New Task</h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form>
-                <div class="form-group">
-                  <label for="modalTaskDescription">Task description</label>
-                  <textarea
-                    class="form-control"
-                    id="modalTaskDescription"
-                    rows="3"
-                  ></textarea>
-                </div>
-                <div class="form-group">
-                  <label for="modalDueDate">Due date</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="mm/dd/yyyy"
-                    id="modalDueDate"
-                    autocomplete="off"
-                  />
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-close" data-dismiss="modal">
-                Close
-              </button>
-              <button type="button" class="btn btn-save">Save changes</button>
-            </div>
-          </div>
-        </div>
+    <div class="time-block container">
+      <div class="row">
+        <p class="hour" id="8am">8am</p>
+        <p class="description past" id="text1" contenteditable="true">nice</p>
+        <button class="saveBtn" id="btn1" onclick="saveChanges('text1')">
+          Save
+        </button>
+      </div>
+      <div class="row">
+        <p class="hour" id="9am">9am</p>
+        <p class="description past" id="text2" contenteditable="true">nice</p>
+        <button class="saveBtn" id="btn2" onclick="saveChanges('text2')">
+          Save
+        </button>
       </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
